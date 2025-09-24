@@ -1,0 +1,18 @@
+Consulta 1
+
+SELECT cliente.dni, cliente.apellido, cliente.nombre, cliente.telefono
+FROM cliente
+WHERE cliente.apellido LIKE 'M%'
+
+Consulta 2
+SELECT c.dni, c.apellido, c.nombre, c.telefono
+FROM cliente c
+JOIN mascota m ON c.idCliente = m.idCliente
+WHERE m.especie = 'canino'
+
+Consulta 3
+SELECT m.alias, m.sexo, m.raza
+FROM mascota m
+JOIN visita v ON m.idMascota = v.idMascota
+WHERE v.fechaVisita = '2025-06-10'
+
